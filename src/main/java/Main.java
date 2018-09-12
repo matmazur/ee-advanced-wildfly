@@ -1,3 +1,10 @@
+/**
+ * This is a simple class executing 2 classes:
+ * <p>
+ * HelloWorld
+ * <p>
+ * StringUnicodeChecker
+ */
 public class Main {
 
 
@@ -6,7 +13,6 @@ public class Main {
 
         HelloWorld helloWorld = new HelloWorld();
         StringUnicodeChecker checker = new StringUnicodeChecker();
-
 
         System.out.println(helloWorld.hello());
 
