@@ -5,9 +5,17 @@ public class Main {
 
 
         HelloWorld helloWorld = new HelloWorld();
+        StringUnicodeChecker checker = new StringUnicodeChecker();
 
 
         System.out.println(helloWorld.hello());
+
+        try {
+            System.out.println(checker.check("Mark"));
+            System.out.println(checker.check("Mark12"));
+        } catch (NoClassDefFoundError e) {
+            System.out.println("There is no class StringUtils found");
+        }
 
     }
 }
