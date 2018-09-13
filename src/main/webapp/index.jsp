@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Insert title here</title>
+  <title>Works?</title>
 </head>
 <body>
 <h1>Does work!</h1>
 
 <br>
-<a href="/test">Click meEEeee</a>
+<a href="${pageContext.request.contextPath}/test">Click meEEeee</a>
 </body>
 </html>
