@@ -1,4 +1,4 @@
-package dependancyInjectionRevision;
+import beans.MessageProducer;
 
 import javax.inject.Inject;
 

@@ -1,4 +1,4 @@
-package dependancyInjectionRevision;
+package beans;
 
 import org.junit.Test;
 import java.time.LocalDate;

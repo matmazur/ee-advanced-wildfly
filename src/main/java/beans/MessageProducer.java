@@ -1,4 +1,4 @@
-package dependancyInjectionRevision;
+package beans;
 
 public interface MessageProducer {
 
