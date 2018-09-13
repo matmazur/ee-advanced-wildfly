@@ -1,3 +1,5 @@
+import dependancyInjectionRevision.MessagePrinter;
+
 /**
  * This is a simple class executing 2 classes:
  * <p>
@@ -22,6 +24,11 @@ public class Main {
         } catch (NoClassDefFoundError e) {
             System.out.println("There is no class StringUtils found");
         }
+
+        MessagePrinter printer = new MessagePrinter();
+        printer.getMessage();
+
+
 
     }
 }
