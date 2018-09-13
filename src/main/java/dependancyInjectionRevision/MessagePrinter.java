@@ -3,7 +3,11 @@ package dependancyInjectionRevision;
 public class MessagePrinter {
 
 
-    MessageProducer producer = new SimpleMessageProducer();
+    MessageProducer producer ;
+
+    public MessagePrinter(MessageProducer producer){
+        this.producer=producer;
+    }
 
     public void getMessage(){
 

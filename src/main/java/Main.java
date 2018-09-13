@@ -1,3 +1,4 @@
+import dependancyInjectionRevision.FileMessageProducer;
 import dependancyInjectionRevision.MessagePrinter;
 
 /**
@@ -25,7 +26,7 @@ public class Main {
             System.out.println("There is no class StringUtils found");
         }
 
-        MessagePrinter printer = new MessagePrinter();
+        MessagePrinter printer = new MessagePrinter(new FileMessageProducer());
         printer.getMessage();
 
 
