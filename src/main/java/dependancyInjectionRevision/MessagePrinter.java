@@ -1,15 +1,17 @@
 package dependancyInjectionRevision;
 
+import javax.inject.Inject;
+
 public class MessagePrinter {
 
 
-    MessageProducer producer ;
+    @Inject
+    private MessageProducer producer;
 
-    public MessagePrinter(MessageProducer producer){
-        this.producer=producer;
+    public MessagePrinter() {
     }
 
-    public void getMessage(){
+    public void getMessage() {
 
         System.out.println(producer.getMessage());
 
