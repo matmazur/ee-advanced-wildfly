@@ -1,11 +1,12 @@
-import beans.FileMessage;
+import beans.Message;
 import beans.MessageProducer;
+import beans.MessageType;
 
 import javax.inject.Inject;
 
 public class MessagePrinter {
 
-    @Inject @FileMessage
+    @Inject @Message(type = MessageType.FILE)
     private MessageProducer producer;
 
 

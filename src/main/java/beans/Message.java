@@ -10,5 +10,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Qualifier
 @Target({ TYPE, METHOD, PARAMETER, FIELD })
 @Retention(RUNTIME)
-public @interface FileMessage {
+public @interface Message {
+
+
+    MessageType type() default MessageType.SIMPLE;
+
+
 }
