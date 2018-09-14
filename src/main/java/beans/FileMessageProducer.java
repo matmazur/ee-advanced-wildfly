@@ -1,7 +1,10 @@
 package beans;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -14,11 +17,12 @@ public class FileMessageProducer implements MessageProducer {
 
         String result = "";
         try {
-            List<String> lines = Files.readAllLines(Paths.get("message.txt"));
+            Path path = new File(getClass().getResource("/message.txt").toURI()).toPath();
+            List<String> lines = Files.readAllLines(path);
             if (lines != null && !lines.isEmpty()) {
                 result = lines.stream().reduce("", (a, b) -> a +"\n"+ b);
             }
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
 
