@@ -1,17 +1,16 @@
 package scopes.beans;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.time.LocalTime;
 
-@ApplicationScoped
-public class InitialTime  implements Serializable {
-
+@SessionScoped
+public class SessionTime implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String message;
 
-    public InitialTime() {
+    public SessionTime() {
         LocalTime currentTime = LocalTime.now();
         message = currentTime.toString();
     }
