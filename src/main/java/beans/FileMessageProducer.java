@@ -17,7 +17,6 @@ public class FileMessageProducer implements MessageProducer {
     @Inject @FileName
     private String fileName;
 
-
     @Override
     public String getMessage() {
 
