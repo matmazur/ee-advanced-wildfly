@@ -1,6 +1,7 @@
 package servlets;
 
 import beans.MessageProducer;
+import qualifiers.Message;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -13,8 +14,9 @@ import java.io.IOException;
 @WebServlet("/test")
 public class TestServlet extends HttpServlet {
 
-    @Inject
+    @Inject @Message
     MessageProducer messageProducer;
+
 
 
     @Override

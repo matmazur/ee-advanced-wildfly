@@ -9,5 +9,7 @@
 
 <br>
 <a href="${pageContext.request.contextPath}/test">Click meEEeee</a>
+<a href="${pageContext.request.contextPath}/test-servlet">Click meEEeee MOAR</a>
+
 </body>
 </html>

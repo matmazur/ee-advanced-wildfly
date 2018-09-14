@@ -1,18 +1,16 @@
 package scopes.beans;
 
-
 import java.time.LocalTime;
 
-public class MessageBean {
+public class InitialTime { private String message;
 
-    private String message;
-
-    public MessageBean() {
+    public InitialTime() {
         LocalTime currentTime = LocalTime.now();
-        message = "MessageBean " + currentTime;
+        message = currentTime.toString();
     }
 
     public String getMessage() {
         return message;
     }
+
 }
