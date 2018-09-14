@@ -1,4 +1,6 @@
-package beans;
+package qualifiers;
+
+import beans.MessageType;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;

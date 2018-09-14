@@ -1,6 +1,7 @@
 package beans;
 
-import javax.enterprise.inject.Default;
+import qualifiers.Message;
+
 import java.time.LocalDate;
 
 @Message

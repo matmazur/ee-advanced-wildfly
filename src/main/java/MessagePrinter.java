@@ -1,4 +1,4 @@
-import beans.Message;
+import qualifiers.Message;
 import beans.MessageProducer;
 import beans.MessageType;
 
