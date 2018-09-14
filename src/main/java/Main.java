@@ -1,9 +1,5 @@
-import beans.FileMessageProducer;
-import beans.SimpleMessageProducer;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import org.jboss.weld.environment.se.Weld;
+import org.jboss.weld.environment.se.WeldContainer;
 
 public class Main {
 
@@ -11,16 +7,16 @@ public class Main {
     public static void main(String[] args) {
 
 
-        MessagePrinter printer = new MessagePrinter();
-        printer.setProducer(new SimpleMessageProducer());
+        Weld weld = new Weld();
+        WeldContainer container = weld.initialize();
+
+        MessagePrinter printer = container.instance().select(MessagePrinter.class).get();
         printer.getMessage();
-        printer.setProducer(new FileMessageProducer());
-        printer.getMessage();
+
+        weld.shutdown();
 
 
-        System.out.println();
 
-        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
-        System.out.println(list.stream().reduce(0, (x, y) -> x + y));
+
     }
 }
