@@ -1,4 +1,9 @@
 package alternatives.dao;
 
-public class UserDao {
+import alternatives.model.User;
+
+public interface UserDao {
+
+
+    public User read(long id);
 }
