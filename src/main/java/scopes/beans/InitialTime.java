@@ -1,5 +1,7 @@
 package scopes.beans;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
 import java.io.Serializable;
 import java.time.LocalTime;
@@ -19,5 +21,13 @@ public class InitialTime  implements Serializable {
     public String getMessage() {
         return message;
     }
+    @PostConstruct
+    private void postConstruct() {
+        System.out.println("PostConstruct() App");
+    }
 
+    @PreDestroy
+    private void preDestroy() {
+        System.out.println("PreDestroy() App");
+    }
 }
