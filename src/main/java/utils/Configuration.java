@@ -1,4 +1,4 @@
-package beans;
+package utils;
 
 import qualifiers.FileName;
 
@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class Configuration {
 
-    public static final String CONFIG_FILE = "/config.properties";
+    private static final String CONFIG_FILE = "/config.properties";
 
 
     @Produces
