@@ -5,6 +5,8 @@ import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
 
 import javax.inject.Inject;
+import java.time.Duration;
+import java.time.Instant;
 
 public class Main {
 
@@ -18,8 +20,14 @@ public class Main {
         MessagePrinter printer = container.instance().select(MessagePrinter.class).get();
         printer.getMessage();
 
-        UserDao dao = new UserDaoImpl();
-        System.out.println(dao.save(new User(2, "Mary", "Poppins")));
+        UserDao userDao = container.select(UserDao.class).get();
+        Instant start = Instant.now();
+        User read = userDao.read(25L);
+        Duration execTime = Duration.between(start, Instant.now());
+        System.out.printf("UserDao.read() method execution time: %dnanos \n" ,execTime.toNanos());
+        System.out.println(read);
+
+
         weld.shutdown();
 
 
