@@ -21,11 +21,11 @@ public class Main {
         printer.getMessage();
 
         UserDao userDao = container.select(UserDao.class).get();
-        Instant start = Instant.now();
+
         User read = userDao.read(25L);
-        Duration execTime = Duration.between(start, Instant.now());
-        System.out.printf("UserDao.read() method execution time: %dnanos \n" ,execTime.toNanos());
+
         System.out.println(read);
+
 
 
         weld.shutdown();
